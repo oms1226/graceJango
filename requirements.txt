@@ -2,7 +2,7 @@ cffi==1.4.2
 cryptography==1.2.1
 Django>=1.9.1
 django-disqus==0.5
-django-tagging>=0.4
+django-tagging>=0.4.5
 enum34==1.1.2
 funcsigs==0.4
 idna==2.0
