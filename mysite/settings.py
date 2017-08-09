@@ -25,7 +25,7 @@ SECRET_KEY = 'mv24_xyu5*=nv+l$*sqn_ilnx3q93*#o-o^3&3an-r*-4%yfxi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['175.210.131.186']
+ALLOWED_HOSTS = ['175.210.131.186', '127.0.0.1']
 
 
 # Application definition
