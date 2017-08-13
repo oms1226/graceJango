@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'disqus',
     'django.contrib.sites',
     'photo.apps.PhotoConfig',
+    #oms1226
+    'embed_video',
 ]
 
 DISQUS_WEBSITE_SHORTNAME = 'pythonwebprogramming'
