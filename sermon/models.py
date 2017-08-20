@@ -48,7 +48,7 @@ class Content(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('content:content_detail', args=(self.id,))
+        return reverse('sermon:content_detail', args=(self.id,))
 
 
     # Add this method to your model

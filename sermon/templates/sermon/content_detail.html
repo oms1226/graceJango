@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}photo_detail.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "photo/photo.css" %}{% endblock %}
+
+{% block content %}
+<div id="content">
+
+    <h2>{{ object.title }}</h2>
+    
+    <ul>
+        <li>Content</li>
+        <p>
+        <audio controls preload="auto" autobuffer>
+            <source src="{{ object.content.url }}" type="audio/mpeg">
+        </audio>
+        </p>
+        <li>Content Description</li>
+        {% if object.description %}<p>{{ object.description|linebreaks }}</p>
+        {% else %}<p>(blank)</p>{% endif %}
+        <li>Date Uploaded</li>
+        <p>{{ object.upload_date }}</p>
+        <li>SermonType Name</li>
+        <p><a href="{% url 'sermon:sermon_type_detail' object.sermonType.id %}">{{ object.sermonType.name }}</a></p>
+
+    </ul>
+
+</div>
+{% endblock %}
