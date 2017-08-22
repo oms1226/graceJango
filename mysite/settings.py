@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'embed_video',
     'sermon.apps.SermonConfig',
     'audiofield',
+    'notice.apps.NoticeConfig',
 ]
 
 DISQUS_WEBSITE_SHORTNAME = 'pythonwebprogramming'

@@ -34,5 +34,6 @@ urlpatterns = [
     url(r'^photo/', include('photo.urls', namespace='photo')),
 
     url(r'^sermon/', include('sermon.urls', namespace='sermon')),
+    url(r'^notice/', include('notice.urls', namespace='notice')),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
