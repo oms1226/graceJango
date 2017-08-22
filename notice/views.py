@@ -20,12 +20,12 @@ from mysite.views import LoginRequiredMixin
 
 #--- TemplateView
 class TagTV(TemplateView) :
-    template_name = 'tagging_cloud.html'
+    template_name = 'tagging/tagging_cloud.html'
 
 #--- ListView
 class NoticeLV(ListView) :
     model = Notice
-    template_name = 'notice_all.html'
+    template_name = 'notice/notice_all.html'
     context_object_name = 'notices'
     paginate_by = 2
 
