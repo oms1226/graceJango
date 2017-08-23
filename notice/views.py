@@ -19,6 +19,9 @@ from mysite.views import LoginRequiredMixin
 # Create your views here.
 
 #--- TemplateView
+from photo.forms import PhotoInlineFormSet
+
+
 class TagTV(TemplateView) :
     template_name = 'tagging/tagging_cloud.html'
 
@@ -94,7 +97,7 @@ class BstrapSearchLV(ListView) :
 
 class NoticeCreateView(LoginRequiredMixin, CreateView):
     model = Notice
-    fields = ['title', 'slug', 'description', 'content', 'tag']
+    fields = ['image', 'title', 'slug', 'description', 'content', 'tag']
     initial = {'slug': 'auto-filling-do-not-input'}
     success_url = reverse_lazy('notice:index')
 

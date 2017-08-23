@@ -63,14 +63,6 @@ class AlbumPhotoCV(LoginRequiredMixin, CreateView):
     model = Album
     fields = ['name', 'description']
 
-    def get_context_data(self, **kwargs):
-        context = super(AlbumPhotoCV, self).get_context_data(**kwargs)
-        if self.request.POST:
-            context['formset'] = PhotoInlineFormSet(self.request.POST, self.request.FILES)
-        else:
-            context['formset'] = PhotoInlineFormSet()
-        return context
-
     def form_valid(self, form):
         form.instance.owner = self.request.user
         context = self.get_context_data()
