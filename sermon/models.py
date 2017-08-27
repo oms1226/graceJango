@@ -21,7 +21,8 @@ class SermonType(models.Model):
     owner = models.ForeignKey(User, null=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ['-name']#'name': 오름 차순
+        #ordering = ('-modify_date',)  # 내림차순
 
     def __str__(self):
         return self.name
@@ -42,7 +43,7 @@ class Content(models.Model):
     owner = models.ForeignKey(User, null=True)
 
     class Meta:
-        ordering = ['title']
+        ordering = ['-title']
 
     def __str__(self):
         return self.title
