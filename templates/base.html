@@ -3,12 +3,14 @@
 <html lang="ko">
 
 <head>
-
     <!-- from getbootstrap.com -->
-
-    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    oms1226: not apply; that's why I don't know
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    -->
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>{% block title %}Django Web Programming{% endblock %}</title>
 
@@ -39,10 +41,19 @@ body {
 </head>
 
 <body role="document">
-
     <!-- first line MENU -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+        <div id="brand" class="navbar-brand">
+            <a href="{% url 'home' %}" rel="home">
+                <!-- to disable lazy loading, remove data-src and data-src-retina -->
+                <img src="{% static 'img/500_graceroad.png' %}" data-src="{% static 'img/500_graceroad.png' %}" data-src-retina="{% static 'img/500_graceroad.png' %}" width=auto height="30" alt="">
+                <!--fallback for no javascript browsers-->
+                <noscript>
+                    <img src="{% static 'img/500_graceroad.png' %}" alt="">
+                </noscript>
+            </a>
+        </div>
 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
