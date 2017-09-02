@@ -41,7 +41,7 @@ body {
 
 /* Carousel base class */
 .carousel {
-  height: auto;
+  height: 100%;
   margin-bottom: 40px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -52,7 +52,9 @@ body {
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: auto;
+  width: audo;
   background-color: yellow;
+
 }
 
 .carousel-inner > .item > img {
@@ -62,6 +64,13 @@ body {
   left: 100px;
   min-width: 10%;
   height: 500px;
+*/
+/* bring your own prefixes */
+/*
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 */
   border: 5px solid #aaa;
 }
