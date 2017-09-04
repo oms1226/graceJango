@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}album_detail.html{% endblock %}
+{% block title %}sermon_detail.html{% endblock %}
 
 {% load staticfiles %}
 {% block extrastyle %}{% static "photo/photo.css" %}{% endblock %}
@@ -19,7 +19,7 @@
             <a href="{{ content.get_absolute_url }}">
             <h4>{{ content.title }}</h4>
             </a>
-            <li>{{ content.description }}</li>
+            <pre>{{ content.description }}</pre>
         </div>
         {% endfor %}
     </div>
