@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'sermon.apps.SermonConfig',
     'audiofield',
     'notice.apps.NoticeConfig',
+    'analytical',
 ]
 
 DISQUS_WEBSITE_SHORTNAME = 'pythonwebprogramming'
@@ -155,3 +156,7 @@ FREQ_TYPE_VALUE = 8000
 
 # 0-Keep original, 1-Convert to MP3, 2-Convert to WAV, 3-Convert to OGG
 CONVERT_TYPE_VALUE = 0
+
+#'analytical'
+CLICKY_SITE_ID = 'gracejan'
+CRAZY_EGG_ACCOUNT_NUMBER = '20170910'
